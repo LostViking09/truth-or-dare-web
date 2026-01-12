@@ -122,6 +122,7 @@ body {
     border-radius: 10px;
     padding: 12px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .package-item:hover {
@@ -138,6 +139,7 @@ body {
     color: #666;
     margin-left: 28px;
     font-weight: normal;
+    cursor: pointer;
 }
 
 /* Buttons */

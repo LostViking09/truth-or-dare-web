@@ -122,6 +122,16 @@ class TruthOrDareGame {
             
             // Event listener for checkbox
             checkbox.addEventListener('change', () => this.updateSelectedPackages());
+            
+            // Make the entire package item clickable
+            packageItem.addEventListener('click', (e) => {
+                // Don't toggle if clicking directly on the checkbox or label
+                if (e.target === checkbox || e.target === label || label.contains(e.target)) {
+                    return;
+                }
+                checkbox.checked = !checkbox.checked;
+                this.updateSelectedPackages();
+            });
         });
         
         // Load saved package selections
