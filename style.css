@@ -309,7 +309,8 @@ button {
 }
 
 .card-content p {
-    font-size: 1.1em;
+    font-size: 1.7em;
+    font-weight: bold;
     line-height: 1.6;
     color: #333;
 }
