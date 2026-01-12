@@ -597,6 +597,16 @@ body.dark-mode .card {
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
 }
 
+body.dark-mode .card.truth {
+    border-color: #2196F3;
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+body.dark-mode .card.dare {
+    border-color: #FFA500;
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.4);
+}
+
 body.dark-mode .card-package {
     color: #667eea;
     border-bottom-color: #333333;
