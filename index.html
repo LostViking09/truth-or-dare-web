@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felelsz vagy Mersz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen active">
+            <h1>Felelsz vagy Mersz</h1>
+            
+            <!-- Settings Section -->
+            <div class="settings-section">
+                <h3>Beállítások</h3>
+                
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="dark-mode">
+                        <span class="checkmark"></span>
+                        <span>Sötét mód</span>
+                    </label>
+                </div>
+                
+                <h3 class="packages-title">Kérdéscsomagok</h3>
+                <div id="packages-list" class="packages-list">
+                    <!-- Dinamikusan generálva JavaScript-ből -->
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="start-game" disabled>Játék indítása</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <button id="back-btn" class="back-btn">← Vissza</button>
+                <div class="round-info">
+                    <span>Kör: <span id="round-number">1</span></span>
+                </div>
+            </div>
+
+            <div class="card-display">
+                <div class="card">
+                    <div class="card-package">
+                        <span id="card-package-name">⭐ Klasszikus</span>
+                    </div>
+                    <div class="card-type">
+                        <h2 id="card-type-text">FELELSZ</h2>
+                    </div>
+                    <div class="card-content">
+                        <p id="card-text">Ez a kérdés szövege jelenik itt meg...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="pass-btn" class="pass-btn">Passz</button>
+                <div class="type-buttons">
+                    <button id="truth-btn" class="truth-btn">Felelsz</button>
+                    <button id="dare-btn" class="dare-btn">Mersz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Continue Game Modal (on page load) -->
+    <div id="continue-modal" class="modal">
+        <div class="modal-content">
+            <h3>Van folyamatban lévő játék!</h3>
+            <p class="modal-info">
+                <strong>Kör:</strong> <span id="modal-round">1</span><br>
+                <strong>Utolsó:</strong> <span id="modal-last-type">-</span>
+            </p>
+            <div class="modal-buttons">
+                <button id="continue-game-btn" class="continue-btn">Folytatás</button>
+                <button id="new-game-modal-btn" class="new-game-btn">Új játék</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Game Modal (when clicking "Játék indítása" during active game) -->
+    <div id="start-game-modal" class="modal">
+        <div class="modal-content">
+            <h3>Folytatod vagy új játékot kezdesz?</h3>
+            <p class="modal-info">
+                <strong>Kör:</strong> <span id="start-modal-round">1</span><br>
+                <strong>Utolsó:</strong> <span id="start-modal-last-type">-</span><br>
+                <span class="modal-hint">Módosítottad a beállításokat.</span>
+            </p>
+            <div class="modal-buttons">
+                <button id="continue-start-btn" class="continue-btn">Folytatás módosított beállításokkal</button>
+                <button id="new-start-btn" class="new-game-btn">Új játék indítása</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

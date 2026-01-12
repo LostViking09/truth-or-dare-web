@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "⭐ Klasszikus",
+        "description": "Klasszikus dolgok kezdésnek.",
+        "truth": "klasszikus_felelsz.txt",
+        "dare": "klasszikus_mersz.txt"
+    },
+    {
+        "id": 2,
+        "name": "💋 Extrém (18+)",
+        "description": "Explicit kérdések kizárólag felnőtteknek.",
+        "truth": "extrem_felelsz.txt",
+        "dare": "extrem_mersz.txt"
+    },
+    {
+        "id": 3,
+        "name": "🔥 Vad buli (18+)",
+        "description": "Kínos kérdések és szexi feladatok.",
+        "truth": "vad_buli_felelsz.txt",
+        "dare": "vad_buli_mersz.txt"
+    },
+    {
+        "id": 4,
+        "name": "❤ Huncut párok (18+)",
+        "description": "Szexi és felejthetetlen. Kizárólag pároknak.",
+        "truth": "huncut_parok_felelsz.txt",
+        "dare": "huncut_parok_mersz.txt"
+    },
+    {
+        "id": 5,
+        "name": "🎉 Buliindító",
+        "description": "Indítsd be vele a bulit.",
+        "truth": "buli_indito_felelsz.txt",
+        "dare": "buli_indito_mersz.txt"
+    },
+    {
+        "id": 6,
+        "name": "🤪 Őrült (18+)",
+        "description": "Dolgok, amikről inmkább ne beszélj és ne is csináld.",
+        "truth": "orult_felelsz.txt",
+        "dare": "orult_mersz.txt"
+    },
+    {
+        "id": 7,
+        "name": "🎈 Gyerekeknek",
+        "description": "Gyermek- és családbarát",
+        "truth": "gyerek_felelsz.txt",
+        "dare": "gyerek_mersz.txt"
+    },
+    {
+        "id": 8,
+        "name": "💘 Csók és mondd",
+        "description": "A csókolózós játék.",
+        "truth": "csokolozos_felelsz.txt",
+        "dare": "csokolozos_mersz.txt"
+    }
+]
