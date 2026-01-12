@@ -9,6 +9,10 @@ class TruthOrDareGame {
         this.darkMode = false;
         this.isInGame = false; // Track if we're in an active game
         
+        // Animation timeouts
+        this.cardAnimationTimeout1 = null;
+        this.cardAnimationTimeout2 = null;
+        
         // Initialize
         this.initializeElements();
         this.loadSettings();
@@ -695,11 +699,24 @@ class TruthOrDareGame {
     }
 
     displayCard(card, packageName, type) {
+        // Clear any pending animation timeouts
+        if (this.cardAnimationTimeout1) {
+            clearTimeout(this.cardAnimationTimeout1);
+            this.cardAnimationTimeout1 = null;
+        }
+        if (this.cardAnimationTimeout2) {
+            clearTimeout(this.cardAnimationTimeout2);
+            this.cardAnimationTimeout2 = null;
+        }
+        
+        // Clean up any existing animation classes
+        this.cardElement.classList.remove('card-exit', 'card-enter');
+        
         // Trigger exit animation for current card
         this.cardElement.classList.add('card-exit');
         
         // After exit animation, update content and trigger enter animation
-        setTimeout(() => {
+        this.cardAnimationTimeout1 = setTimeout(() => {
             // Remove exit class
             this.cardElement.classList.remove('card-exit');
             
@@ -718,9 +735,12 @@ class TruthOrDareGame {
             this.cardElement.classList.add('card-enter');
             
             // Remove enter class after animation completes
-            setTimeout(() => {
+            this.cardAnimationTimeout2 = setTimeout(() => {
                 this.cardElement.classList.remove('card-enter');
+                this.cardAnimationTimeout2 = null;
             }, 700);
+            
+            this.cardAnimationTimeout1 = null;
         }, 500); // Duration of exit animation
     }
 
