@@ -185,11 +185,11 @@ class TruthOrDareGame {
         // Add class for animation
         this.passBtnGame.classList.add('pressing');
         
-        // Set timeout for 2 seconds
+        // Set timeout for 1 second
         this.passTimeout = setTimeout(() => {
             this.passCard();
             this.cancelPassPress();
-        }, 2000);
+        }, 1000);
     }
 
     cancelPassPress() {
