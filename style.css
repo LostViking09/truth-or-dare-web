@@ -125,9 +125,10 @@ body {
     cursor: pointer;
 }
 
-.package-item:hover {
+.package-item:has(input[type="checkbox"]:checked) {
     border-color: #667eea;
     transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
 }
 
 .package-item .checkbox-label {
@@ -575,8 +576,9 @@ body.dark-mode .package-item {
     border-color: #333333;
 }
 
-body.dark-mode .package-item:hover {
+body.dark-mode .package-item:has(input[type="checkbox"]:checked) {
     border-color: #667eea;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
 }
 
 body.dark-mode .package-description {
