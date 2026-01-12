@@ -226,6 +226,16 @@ button {
     flex-direction: column;
 }
 
+.card.truth {
+    border-color: #2196F3;
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+.card.dare {
+    border-color: #FFA500;
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.4);
+}
+
 .card:hover {
     transform: translateY(-5px);
 }

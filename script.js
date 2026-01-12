@@ -728,6 +728,10 @@ class TruthOrDareGame {
             this.cardTypeDisplay.classList.remove('truth', 'dare');
             this.cardTypeDisplay.classList.add(type);
             
+            // Add appropriate class to card element
+            this.cardElement.classList.remove('truth', 'dare');
+            this.cardElement.classList.add(type);
+            
             this.cardTextDisplay.textContent = card;
             this.roundNumberDisplay.textContent = this.currentRound;
             
