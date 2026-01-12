@@ -695,11 +695,15 @@ class TruthOrDareGame {
     }
 
     displayCard(card, packageName, type) {
-        // Trigger flip animation
-        this.cardElement.classList.add('flipping');
+        // Trigger exit animation for current card
+        this.cardElement.classList.add('card-exit');
         
-        // Update content at halfway point of animation
+        // After exit animation, update content and trigger enter animation
         setTimeout(() => {
+            // Remove exit class
+            this.cardElement.classList.remove('card-exit');
+            
+            // Update card content
             this.cardPackageDisplay.textContent = packageName;
             this.cardTypeDisplay.textContent = type === 'truth' ? 'FELELSZ' : 'MERSZ';
             
@@ -709,12 +713,15 @@ class TruthOrDareGame {
             
             this.cardTextDisplay.textContent = card;
             this.roundNumberDisplay.textContent = this.currentRound;
-        }, 300); // Half of 600ms animation
-        
-        // Remove animation class after animation completes
-        setTimeout(() => {
-            this.cardElement.classList.remove('flipping');
-        }, 600);
+            
+            // Trigger enter animation
+            this.cardElement.classList.add('card-enter');
+            
+            // Remove enter class after animation completes
+            setTimeout(() => {
+                this.cardElement.classList.remove('card-enter');
+            }, 700);
+        }, 500); // Duration of exit animation
     }
 
     resetIndexes(type) {
